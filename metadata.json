@@ -1,0 +1,7 @@
+{
+  "name": "autoPilot AI - L'IA pour Auto-Écoles test",
+  "description": "Une plateforme innovante utilisant l'IA pour automatiser le secrétariat, la gestion des plannings et le suivi pédagogique des auto-écoles françaises.",
+  "requestFramePermissions": [
+    "microphone"
+  ]
+}

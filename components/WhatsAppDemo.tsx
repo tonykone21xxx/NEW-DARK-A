@@ -1,4 +1,3 @@
-
 import React, { useState, useRef, useEffect } from 'react';
 import { GeminiChatService, API_KEY_ERROR_MESSAGE } from '../services/gemini';
 
@@ -74,7 +73,7 @@ const WhatsAppDemo: React.FC = () => {
   };
 
   return (
-    <section id="whatsapp-demo" className="py-24 bg-gray-900 border-y border-gray-800 animate-section-fade-in overflow-hidden">
+    <section id="whatsapp-demo" className="py-24 bg-transparent border-y border-white/5 animate-section-fade-in overflow-hidden">
       <div className="max-w-6xl mx-auto px-6">
         <div className="text-center mb-16 relative z-10">
           <div className="inline-block px-4 py-1.5 mb-6 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-400 text-[10px] font-black uppercase tracking-[0.2em]">
@@ -93,7 +92,7 @@ const WhatsAppDemo: React.FC = () => {
           {/* Glow Effect */}
           <div className="absolute -inset-10 bg-blue-600/20 rounded-[4rem] blur-[60px] opacity-50 group-hover:opacity-75 transition duration-1000"></div>
           
-          <div className="relative border-8 border-gray-950 rounded-[3rem] overflow-hidden shadow-2xl flex flex-col h-[700px] bg-black">
+          <div className="relative border-8 border-gray-800 rounded-[3rem] overflow-hidden shadow-2xl flex flex-col h-[700px] bg-black">
             {/* iOS Dynamic Island / Notch area simulation */}
             <div className="absolute top-0 left-1/2 -translate-x-1/2 w-32 h-7 bg-black rounded-b-3xl z-20"></div>
 

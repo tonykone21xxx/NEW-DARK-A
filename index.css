@@ -1,15 +1,22 @@
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-@layer base {
-  body {
-    @apply bg-black text-gray-100 selection:bg-orange-500/30;
-    font-family: 'Inter', sans-serif;
-    scroll-behavior: smooth;
-    animation: fadeIn 0.8s ease-out;
-  }
+/* Custom Styles moved from index.html */
+body {
+  font-family: 'Inter', sans-serif;
+  scroll-behavior: smooth;
+  animation: fadeIn 0.8s ease-out;
+  background: linear-gradient(-45deg, #020617, #111827, #1e1b4b, #111827);
+  background-size: 400% 400%;
+  animation: gradientBG 15s ease infinite, fadeIn 0.8s ease-out;
+  color: #ffffff;
+}
+
+@keyframes gradientBG {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
 }
 
 .font-montserrat {
@@ -17,21 +24,21 @@
 }
 
 .gradient-text {
-  background: linear-gradient(90deg, #f97316, #a855f7); /* Orange to Purple */
+  background: linear-gradient(90deg, #3b82f6, #a855f7);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
 .glass {
-  background: rgba(20, 20, 25, 0.6);
+  background: rgba(17, 24, 39, 0.7);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
   border: 1px solid rgba(255, 255, 255, 0.08);
   box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
 }
 
-.glow-orange {
-  box-shadow: 0 0 40px rgba(249, 115, 22, 0.3);
+.glow-blue {
+  box-shadow: 0 0 40px rgba(59, 130, 246, 0.3);
 }
 
 @keyframes float {
@@ -59,16 +66,16 @@
 }
 
 ::-webkit-scrollbar-track {
-  background: #0f0f0f;
+  background: #111827;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #333;
+  background: #374151;
   border-radius: 5px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #555;
+  background: #4b5563;
 }
 
 input, textarea, select {

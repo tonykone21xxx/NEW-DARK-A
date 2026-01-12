@@ -1,4 +1,3 @@
-
 import React, { useState, useRef, useEffect } from 'react';
 import { ai, createPcmBlob, decode, decodeAudioData, API_KEY_ERROR_MESSAGE } from '../services/gemini';
 import { LiveServerMessage, Modality } from '@google/genai';
@@ -148,7 +147,7 @@ const VoiceJoin: React.FC = () => {
 
   return (
     <div className="max-w-4xl mx-auto px-6">
-      <div className="relative group p-1 bg-gradient-to-r from-orange-500/20 to-purple-500/20 rounded-[3rem] transition-all hover:from-orange-500/40 hover:to-purple-500/40 shadow-2xl animate-section-fade-in">
+      <div className="relative group p-1 bg-gradient-to-r from-blue-500/20 to-purple-500/20 rounded-[3rem] transition-all hover:from-blue-500/40 hover:to-purple-500/40 shadow-2xl animate-section-fade-in">
         <div className="glass p-12 rounded-[2.9rem] text-center bg-white/80 backdrop-blur-xl border-gray-200">
           <h3 className="text-3xl font-montserrat font-black mb-4 uppercase italic tracking-tight text-gray-900">
             Vous voulez <span className="gradient-text">passer à l'IA ?</span>
@@ -162,7 +161,7 @@ const VoiceJoin: React.FC = () => {
               <button 
                 onClick={startJoinSession}
                 disabled={isConnecting}
-                className="bg-orange-500 hover:bg-orange-600 text-white px-10 py-5 rounded-2xl font-black text-xl uppercase tracking-tighter flex items-center gap-4 transition-all hover:scale-105 active:scale-95 shadow-xl shadow-orange-500/30"
+                className="bg-blue-600 hover:bg-blue-700 text-white px-10 py-5 rounded-2xl font-black text-xl uppercase tracking-tighter flex items-center gap-4 transition-all hover:scale-105 active:scale-95 shadow-xl shadow-blue-500/30"
               >
                 {isConnecting ? <><i className="fas fa-circle-notch fa-spin"></i> Initialisation de l'IA...</> : <><i className="fas fa-microphone"></i> S'inscrire Vocalement</>}
               </button>
@@ -172,7 +171,7 @@ const VoiceJoin: React.FC = () => {
                   {[...Array(10)].map((_, i) => (
                     <div 
                       key={i} 
-                      className="w-1.5 bg-orange-400 rounded-full animate-pulse-dynamic shadow-[0_0_15px_rgba(249,115,22,0.5)]"
+                      className="w-1.5 bg-blue-400 rounded-full animate-pulse-dynamic shadow-[0_0_15px_rgba(59,130,246,0.5)]"
                       style={{ 
                         height: isAgentSpeaking ? `${Math.random() * 50 + 10}px` : '8px',
                         animationDelay: `${i * 0.1}s` 

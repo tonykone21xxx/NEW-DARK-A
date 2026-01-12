@@ -1,4 +1,3 @@
-
 import React, { useState, useRef } from 'react';
 import { generateSpeech, decodeBase64, decodeAudioData, API_KEY_ERROR_MESSAGE } from '../services/gemini';
 
@@ -47,15 +46,15 @@ const VoiceDemo: React.FC = () => {
 
   return (
     <div id="demo-voice" className="glass p-10 rounded-[2.5rem] max-w-4xl mx-auto border-white/10 relative overflow-hidden group">
-      <div className="absolute top-0 right-0 w-64 h-64 bg-orange-500/10 blur-[100px] -z-10 animate-blob"></div>
+      <div className="absolute top-0 right-0 w-64 h-64 bg-blue-500/10 blur-[100px] -z-10 animate-blob"></div>
       
       <div className="flex flex-col md:flex-row items-center gap-8">
         <div className="relative">
-          <div className={`w-32 h-32 rounded-full bg-gradient-to-tr from-orange-600 to-purple-600 flex items-center justify-center text-4xl text-white shadow-xl transition-all duration-500 ${isPlaying ? 'scale-110 ring-8 ring-orange-500/20 glow-orange' : 'group-hover:scale-105 group-hover:shadow-2xl'}`}>
+          <div className={`w-32 h-32 rounded-full bg-gradient-to-tr from-blue-600 to-purple-600 flex items-center justify-center text-4xl text-white shadow-xl transition-all duration-500 ${isPlaying ? 'scale-110 ring-8 ring-blue-500/20 glow-blue' : 'group-hover:scale-105 group-hover:shadow-2xl'}`}>
             <i className={`fas ${isPlaying ? 'fa-volume-high animate-pulse' : 'fa-headset'}`}></i>
           </div>
           {isPlaying && (
-            <div className="absolute -inset-2 rounded-full border-2 border-orange-400 border-dashed animate-[spin_8s_linear_infinite] opacity-70"></div>
+            <div className="absolute -inset-2 rounded-full border-2 border-blue-400 border-dashed animate-[spin_8s_linear_infinite] opacity-70"></div>
           )}
         </div>
 
@@ -70,7 +69,7 @@ const VoiceDemo: React.FC = () => {
           <button 
             onClick={handlePlayDemo}
             disabled={isLoading}
-            className={`group relative overflow-hidden bg-orange-500 text-white px-8 py-4 rounded-2xl font-bold text-lg transition-all hover:scale-105 active:scale-95 flex items-center gap-3 disabled:opacity-70 mx-auto md:mx-0 shadow-lg hover:shadow-xl`}
+            className={`group relative overflow-hidden bg-blue-600 text-white px-8 py-4 rounded-2xl font-bold text-lg transition-all hover:scale-105 active:scale-95 flex items-center gap-3 disabled:opacity-70 mx-auto md:mx-0 shadow-lg hover:shadow-xl`}
           >
             {isLoading ? (
               <i className="fas fa-spinner fa-spin"></i>
@@ -78,7 +77,7 @@ const VoiceDemo: React.FC = () => {
               <i className={`fas ${isPlaying ? 'fa-pause' : 'fa-play'}`}></i>
             )}
             {isPlaying ? "Lecture en cours..." : "Lancer la démo vocale"}
-            <div className="absolute inset-0 bg-orange-100/50 translate-y-full group-hover:translate-x-0 transition-transform duration-300"></div>
+            <div className="absolute inset-0 bg-blue-100/50 translate-y-full group-hover:translate-x-0 transition-transform duration-300"></div>
           </button>
         </div>
       </div>

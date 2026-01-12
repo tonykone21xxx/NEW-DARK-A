@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { ai, API_KEY_ERROR_MESSAGE } from '../services/gemini';
 
@@ -53,7 +52,7 @@ const GroundingFAQ: React.FC = () => {
     <section className="py-24 animate-section-fade-in relative">
       <div className="max-w-4xl mx-auto px-6">
         <div className="text-center mb-12">
-          <div className="inline-block px-4 py-1.5 mb-6 rounded-full bg-orange-500/10 border border-orange-500/20 text-orange-500 text-[10px] font-black uppercase tracking-[0.2em] animate-pulse-slow">
+          <div className="inline-block px-4 py-1.5 mb-6 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-500 text-[10px] font-black uppercase tracking-[0.2em] animate-pulse-slow">
             Information en Temps Réel
           </div>
           <h2 className="text-4xl font-montserrat font-black uppercase italic mb-4 text-white">
@@ -62,7 +61,7 @@ const GroundingFAQ: React.FC = () => {
           <p className="text-gray-400">Obtenez des réponses instantanées et sourcées en temps réel grâce à notre IA. Posez n'importe quelle question sur la réglementation actuelle du permis de conduire.</p>
         </div>
 
-        <div className="glass p-8 rounded-[2.5rem] border-white/5 bg-gray-900/50 shadow-2xl">
+        <div className="glass p-8 rounded-[2.5rem] border-white/5 bg-gray-800/50 shadow-2xl">
           <form onSubmit={handleSearch} className="flex gap-4 mb-8">
             <div className="flex-1 relative">
               <i className="fas fa-search absolute left-6 top-1/2 -translate-y-1/2 text-gray-500"></i>
@@ -71,13 +70,13 @@ const GroundingFAQ: React.FC = () => {
                 value={query}
                 onChange={(e) => setQuery(e.target.value)}
                 placeholder="Ex: Comment activer mon compte CPF ?"
-                className="w-full bg-gray-950 border border-gray-800 rounded-2xl pl-14 pr-6 py-4 text-sm focus:border-orange-500 focus:ring-2 focus:ring-orange-500/50 outline-none transition-all shadow-inner text-white placeholder-gray-500"
+                className="w-full bg-gray-900 border border-gray-800 rounded-2xl pl-14 pr-6 py-4 text-sm focus:border-blue-500 focus:ring-2 focus:ring-blue-500/50 outline-none transition-all shadow-inner text-white placeholder-gray-500"
               />
             </div>
             <button 
               type="submit"
               disabled={isLoading}
-              className="bg-orange-500 hover:bg-orange-600 px-8 rounded-2xl font-bold text-white transition-all disabled:opacity-50 hover:scale-105 active:scale-95 shadow-lg"
+              className="bg-blue-600 hover:bg-blue-700 px-8 rounded-2xl font-bold text-white transition-all disabled:opacity-50 hover:scale-105 active:scale-95 shadow-lg"
             >
               {isLoading ? <i className="fas fa-spinner fa-spin"></i> : "Demander"}
             </button>
@@ -85,7 +84,7 @@ const GroundingFAQ: React.FC = () => {
 
           {answer ? (
             <div className="animate-in fade-in slide-in-from-top-4 duration-500">
-              <div className="p-6 bg-gray-800 rounded-2xl border border-gray-700 mb-6 shadow-md">
+              <div className="p-6 bg-gray-700/50 rounded-2xl border border-gray-600 mb-6 shadow-md">
                 <p className="text-gray-200 leading-relaxed whitespace-pre-wrap">{answer}</p>
               </div>
               
@@ -115,7 +114,7 @@ const GroundingFAQ: React.FC = () => {
                 <button 
                   key={i} 
                   onClick={() => { setQuery(q); }}
-                  className="text-left p-4 bg-gray-950/50 rounded-xl border border-gray-800 hover:border-orange-500/30 hover:bg-gray-800 transition-all text-xs text-gray-400 font-medium hover:scale-[1.01] active:scale-99 shadow-sm"
+                  className="text-left p-4 bg-gray-900/50 rounded-xl border border-gray-800 hover:border-blue-500/30 hover:bg-gray-800 transition-all text-xs text-gray-400 font-medium hover:scale-[1.01] active:scale-99 shadow-sm"
                 >
                   <i className="fas fa-lightbulb text-purple-500/50 mr-2"></i>
                   {q}

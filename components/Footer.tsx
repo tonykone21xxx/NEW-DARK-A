@@ -1,4 +1,3 @@
-
 import React from 'react';
 
 interface FooterProps {
@@ -7,23 +6,23 @@ interface FooterProps {
 
 const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
   return (
-    <footer className="py-16 px-6 border-t border-gray-900 mt-20 animate-section-fade-in bg-gray-950">
+    <footer className="py-16 px-6 border-t border-gray-800 mt-20 animate-section-fade-in bg-gray-900/50 backdrop-blur-md">
       <div className="max-w-7xl mx-auto grid md:grid-cols-4 gap-12 mb-16">
         <div className="col-span-2">
           <div 
             className="text-2xl font-montserrat font-black tracking-tighter italic mb-6 cursor-pointer relative group text-white"
             onClick={() => onNavigate('home')}
           >
-            AUTO<span className="text-orange-500 group-hover:text-orange-400 transition-colors duration-300">PILOT</span> AI
-            <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-orange-500 group-hover:w-full transition-all duration-300"></span>
+            AUTO<span className="text-blue-500 group-hover:text-blue-400 transition-colors duration-300">PILOT</span> AI
+            <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-blue-500 group-hover:w-full transition-all duration-300"></span>
           </div>
           <p className="text-gray-500 max-w-sm mb-8">
             L'IA qui conduit la croissance de votre auto-école. Des solutions intelligentes conçues pour les professionnels du permis de conduire.
           </p>
           <div className="flex gap-4">
-            <a href="#" className="w-10 h-10 rounded-full bg-gray-900 flex items-center justify-center text-gray-400 hover:bg-orange-500 hover:text-white transition-colors hover:scale-110 shadow-md hover:shadow-lg"><i className="fab fa-linkedin-in"></i></a>
-            <a href="#" className="w-10 h-10 rounded-full bg-gray-900 flex items-center justify-center text-gray-400 hover:bg-orange-500 hover:text-white transition-colors hover:scale-110 shadow-md hover:shadow-lg"><i className="fab fa-twitter"></i></a>
-            <a href="#" className="w-10 h-10 rounded-full bg-gray-900 flex items-center justify-center text-gray-400 hover:bg-orange-500 hover:text-white transition-colors hover:scale-110 shadow-md hover:shadow-lg"><i className="fab fa-whatsapp"></i></a>
+            <a href="#" className="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center text-gray-400 hover:bg-blue-600 hover:text-white transition-colors hover:scale-110 shadow-md hover:shadow-lg"><i className="fab fa-linkedin-in"></i></a>
+            <a href="#" className="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center text-gray-400 hover:bg-blue-600 hover:text-white transition-colors hover:scale-110 shadow-md hover:shadow-lg"><i className="fab fa-twitter"></i></a>
+            <a href="#" className="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center text-gray-400 hover:bg-blue-600 hover:text-white transition-colors hover:scale-110 shadow-md hover:shadow-lg"><i className="fab fa-whatsapp"></i></a>
           </div>
         </div>
 
@@ -45,7 +44,7 @@ const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
         </div>
       </div>
       
-      <div className="max-w-7xl mx-auto pt-8 border-t border-gray-900 flex flex-col md:flex-row justify-between items-center gap-4 text-gray-600 text-xs">
+      <div className="max-w-7xl mx-auto pt-8 border-t border-gray-800 flex flex-col md:flex-row justify-between items-center gap-4 text-gray-600 text-xs">
         <p>© 2024 AutoPilot AI. Tous droits réservés.</p>
         <div className="flex gap-8">
           <button onClick={() => onNavigate('mentions')} className="hover:text-gray-400 transition-colors relative group">Mentions Légales<span className="absolute -bottom-0.5 left-0 w-0 h-0.5 bg-gray-600 group-hover:w-full transition-all duration-300"></span></button>

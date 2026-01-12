@@ -1,4 +1,3 @@
-
 import React, { useState, useMemo } from 'react';
 
 const ROICalculator: React.FC<{ onBack: () => void }> = ({ onBack }) => {
@@ -40,7 +39,7 @@ const ROICalculator: React.FC<{ onBack: () => void }> = ({ onBack }) => {
 
   return (
     <div className="max-w-6xl mx-auto px-6 py-20 animate-section-fade-in">
-      <button onClick={onBack} className="mb-12 text-orange-500 hover:text-white transition-colors flex items-center gap-2 font-bold uppercase tracking-widest text-xs">
+      <button onClick={onBack} className="mb-12 text-blue-500 hover:text-white transition-colors flex items-center gap-2 font-bold uppercase tracking-widest text-xs">
         <i className="fas fa-arrow-left"></i> Retour à l'accueil
       </button>
 
@@ -68,7 +67,7 @@ const ROICalculator: React.FC<{ onBack: () => void }> = ({ onBack }) => {
                 type="range" min="5" max="80" step="1" 
                 value={clientsPerMonth} 
                 onChange={(e) => setClientsPerMonth(parseInt(e.target.value))}
-                className="w-full h-2 bg-gray-700 rounded-lg appearance-none cursor-pointer accent-orange-500 focus:outline-none focus:ring-2 focus:ring-orange-500/50 transition-all duration-300"
+                className="w-full h-2 bg-gray-700 rounded-lg appearance-none cursor-pointer accent-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-500/50 transition-all duration-300"
               />
               <div className="flex justify-between text-[10px] text-gray-500 font-bold uppercase">
                 <span>Indépendant</span>
@@ -102,12 +101,12 @@ const ROICalculator: React.FC<{ onBack: () => void }> = ({ onBack }) => {
               <p className="mt-2 text-xs text-gray-500 italic">Soit environ {Math.round(stats.hoursSavedYear/52)}h gagnées chaque semaine grâce à l'IA.</p>
             </div>
 
-            <div className="p-8 rounded-3xl bg-gray-900 border border-gray-800 group hover:border-orange-500/30 transition-all hover:shadow-lg hover:scale-[1.02]">
+            <div className="p-8 rounded-3xl bg-gray-900 border border-gray-800 group hover:border-blue-500/30 transition-all hover:shadow-lg hover:scale-[1.02]">
               <div className="flex items-center gap-4 mb-4">
-                <div className="w-10 h-10 rounded-full bg-orange-900/30 flex items-center justify-center shadow-md group-hover:scale-110 transition-transform">
-                  <i className="fas fa-user-plus text-orange-400"></i>
+                <div className="w-10 h-10 rounded-full bg-blue-900/30 flex items-center justify-center shadow-md group-hover:scale-110 transition-transform">
+                  <i className="fas fa-user-plus text-blue-400"></i>
                 </div>
-                <div className="text-orange-400 font-black text-3xl">+{stats.recoveredStudentsYear}</div>
+                <div className="text-blue-400 font-black text-3xl">+{stats.recoveredStudentsYear}</div>
               </div>
               <div className="text-[10px] text-gray-400 uppercase font-black tracking-widest">Ventes additionnelles par an</div>
               <p className="mt-2 text-xs text-gray-500 italic">Élèves récupérés grâce à la réactivité 24/7 de nos agents IA.</p>
@@ -117,7 +116,7 @@ const ROICalculator: React.FC<{ onBack: () => void }> = ({ onBack }) => {
 
         <div className="lg:col-span-2 sticky top-32">
           <div className="relative group">
-            <div className="absolute -inset-1 bg-gradient-to-tr from-orange-500 to-purple-500 rounded-[3rem] blur opacity-30 group-hover:opacity-60 transition duration-1000"></div>
+            <div className="absolute -inset-1 bg-gradient-to-tr from-blue-500 to-purple-500 rounded-[3rem] blur opacity-30 group-hover:opacity-60 transition duration-1000"></div>
             <div className="relative glass p-10 rounded-[3rem] border-white/5 bg-gray-900 shadow-2xl">
               <div className="text-center mb-10">
                 <div className="text-xs font-bold uppercase tracking-[0.3em] text-gray-400 mb-4">Potentiel de Croissance</div>
@@ -126,7 +125,7 @@ const ROICalculator: React.FC<{ onBack: () => void }> = ({ onBack }) => {
                 </div>
                 <div className="text-sm font-bold text-purple-400 mb-4">Par an</div>
                 <div className="inline-block px-4 py-2 bg-gray-800 border border-gray-700 rounded-full text-xs font-bold text-gray-300">
-                  <span className="text-orange-500">+{stats.totalImpactMonth.toLocaleString()}€</span> / mois
+                  <span className="text-blue-500">+{stats.totalImpactMonth.toLocaleString()}€</span> / mois
                 </div>
               </div>
 
@@ -144,8 +143,8 @@ const ROICalculator: React.FC<{ onBack: () => void }> = ({ onBack }) => {
                   <span className="font-bold text-white">+{stats.extraRevenueYear.toLocaleString()}€</span>
                 </div>
                 <div className="flex justify-between items-center py-3">
-                  <span className="text-sm text-orange-500 font-bold italic uppercase tracking-tighter">ROI sur investissement</span>
-                  <span className="font-bold text-orange-500 italic">X 8.5</span>
+                  <span className="text-sm text-blue-500 font-bold italic uppercase tracking-tighter">ROI sur investissement</span>
+                  <span className="font-bold text-blue-500 italic">X 8.5</span>
                 </div>
               </div>
 
@@ -155,7 +154,7 @@ const ROICalculator: React.FC<{ onBack: () => void }> = ({ onBack }) => {
                 </p>
               </div>
 
-              <button className="w-full bg-orange-500 hover:bg-orange-600 text-white font-black py-6 rounded-2xl uppercase tracking-tighter text-xl transition-all hover:scale-[1.03] shadow-2xl shadow-orange-500/30 active:scale-98">
+              <button className="w-full bg-blue-600 hover:bg-blue-700 text-white font-black py-6 rounded-2xl uppercase tracking-tighter text-xl transition-all hover:scale-[1.03] shadow-2xl shadow-blue-500/30 active:scale-98">
                 Activer mon AutoPilot
               </button>
             </div>

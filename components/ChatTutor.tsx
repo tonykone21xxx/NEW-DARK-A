@@ -1,4 +1,3 @@
-
 import React, { useState, useRef, useEffect } from 'react';
 import { GeminiChatService, generateSpeech, decodeBase64, decodeAudioData, generateIllustration, API_KEY_ERROR_MESSAGE } from '../services/gemini';
 
@@ -146,13 +145,13 @@ const ChatTutor: React.FC = () => {
         </div>
 
         <div className="relative group">
-          <div className="absolute -inset-1 bg-gradient-to-r from-purple-600 to-orange-600 rounded-[2.6rem] blur opacity-25 group-hover:opacity-50 transition duration-1000"></div>
+          <div className="absolute -inset-1 bg-gradient-to-r from-purple-600 to-blue-600 rounded-[2.6rem] blur opacity-25 group-hover:opacity-50 transition duration-1000"></div>
           <div className="relative glass rounded-[2.5rem] overflow-hidden border-white/5 shadow-2xl flex flex-col h-[700px] bg-gray-900">
             {/* Header */}
             <div className="p-6 border-b border-white/5 flex items-center justify-between bg-gray-900/50 backdrop-blur-sm">
               <div className="flex items-center gap-4">
                 <div className="relative">
-                  <div className="w-12 h-12 rounded-full bg-gradient-to-tr from-purple-600 to-orange-400 flex items-center justify-center shadow-lg text-white">
+                  <div className="w-12 h-12 rounded-full bg-gradient-to-tr from-purple-600 to-blue-400 flex items-center justify-center shadow-lg text-white">
                     <i className="fas fa-graduation-cap"></i>
                   </div>
                   <div className="absolute bottom-0 right-0 w-3 h-3 bg-green-500 border-2 border-gray-900 rounded-full animate-pulse-fast"></div>
@@ -170,7 +169,7 @@ const ChatTutor: React.FC = () => {
                 <div key={i} className={`flex ${msg.role === 'user' ? 'justify-end' : 'justify-start'}`}>
                   <div className={`max-w-[85%] p-5 rounded-[2rem] shadow-lg transition-all duration-300 ${
                     msg.role === 'user' 
-                      ? 'bg-orange-600 text-white rounded-tr-none' 
+                      ? 'bg-blue-600 text-white rounded-tr-none' 
                       : 'bg-gray-800 text-gray-100 rounded-tl-none border border-gray-700'
                   }`}>
                     <p className="text-sm leading-relaxed whitespace-pre-wrap">{msg.text}</p>
@@ -192,7 +191,7 @@ const ChatTutor: React.FC = () => {
                       <div className="mt-4 flex flex-wrap gap-2">
                         <button 
                           onClick={() => handleSpeak(msg.text)}
-                          className="text-[10px] text-orange-400 hover:text-white font-bold flex items-center gap-2 px-3 py-1.5 bg-orange-900/20 rounded-full transition-all border border-orange-500/20 hover:bg-orange-500 active:scale-95 shadow-sm hover:shadow-md"
+                          className="text-[10px] text-blue-400 hover:text-white font-bold flex items-center gap-2 px-3 py-1.5 bg-blue-900/20 rounded-full transition-all border border-blue-500/20 hover:bg-blue-500 active:scale-95 shadow-sm hover:shadow-md"
                           disabled={isGeneratingImage(i, messages)} // Disable speak while image is generating for this message
                         >
                           <i className={`fas ${isReading && audioSourceRef.current && (audioSourceRef.current as any).buffer === messages[i].text ? 'fa-volume-high animate-pulse' : 'fa-volume-up'}`}></i>
@@ -216,9 +215,9 @@ const ChatTutor: React.FC = () => {
                 <div className="flex justify-start">
                   <div className="bg-gray-800 p-4 rounded-2xl border border-gray-700">
                     <div className="flex gap-1.5">
-                      <div className="w-2 h-2 bg-orange-500 rounded-full animate-bounce"></div>
-                      <div className="w-2 h-2 bg-orange-500 rounded-full animate-bounce [animation-delay:-0.15s]"></div>
-                      <div className="w-2 h-2 bg-orange-500 rounded-full animate-bounce [animation-delay:-0.3s]"></div>
+                      <div className="w-2 h-2 bg-blue-500 rounded-full animate-bounce"></div>
+                      <div className="w-2 h-2 bg-blue-500 rounded-full animate-bounce [animation-delay:-0.15s]"></div>
+                      <div className="w-2 h-2 bg-blue-500 rounded-full animate-bounce [animation-delay:-0.3s]"></div>
                     </div>
                   </div>
                 </div>

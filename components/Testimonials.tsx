@@ -1,5 +1,4 @@
-
-import React from 'react';
+import React, { useState } from 'react';
 
 const Testimonials: React.FC = () => {
   const testimonials = [
@@ -47,12 +46,12 @@ const Testimonials: React.FC = () => {
         <div className="grid md:grid-cols-3 gap-8">
           {testimonials.map((t, i) => (
             <div key={i} className="relative group">
-              <div className="absolute inset-0 bg-gray-800 rounded-[2.5rem] transform rotate-1 group-hover:rotate-0 transition-transform duration-300"></div>
+              <div className="absolute inset-0 bg-gray-700 rounded-[2.5rem] transform rotate-1 group-hover:rotate-0 transition-transform duration-300"></div>
               <div className="relative bg-gray-900 p-10 rounded-[2.5rem] border border-gray-800 h-full flex flex-col justify-between shadow-lg hover:shadow-xl transition-all hover:-translate-y-1">
                 
                 <div className="mb-8">
                    <div className="flex justify-between items-center mb-6">
-                     <div className="flex text-orange-500 gap-1 text-xs">
+                     <div className="flex text-blue-500 gap-1 text-xs">
                       {[...Array(5)].map((_, i) => <i key={i} className="fas fa-star"></i>)}
                     </div>
                     <span className="bg-green-900/30 text-green-400 border border-green-500/20 px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-wide">
@@ -80,9 +79,9 @@ const Testimonials: React.FC = () => {
         </div>
 
         {/* Logos strip */}
-        <div className="mt-24 pt-12 border-t border-gray-900 flex flex-wrap justify-center items-center gap-12 md:gap-20 opacity-30 grayscale hover:grayscale-0 transition-all duration-700 filter">
+        <div className="mt-24 pt-12 border-t border-gray-800 flex flex-wrap justify-center items-center gap-12 md:gap-20 opacity-30 grayscale hover:grayscale-0 transition-all duration-700 filter">
           {["CER Réseau", "ECF", "Code Rousseau", "EnPC", "Planète Permis"].map((brand, i) => (
-             <span key={i} className="text-xl md:text-2xl font-black italic tracking-tighter text-gray-600 hover:text-orange-500 transition-colors cursor-default">
+             <span key={i} className="text-xl md:text-2xl font-black italic tracking-tighter text-gray-600 hover:text-blue-500 transition-colors cursor-default">
                {brand}
              </span>
           ))}

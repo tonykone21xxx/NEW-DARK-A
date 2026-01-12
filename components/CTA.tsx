@@ -1,4 +1,3 @@
-
 import React from 'react';
 
 interface CTAProps {
@@ -12,15 +11,15 @@ const CTA: React.FC<CTAProps> = ({ onNavigate }) => {
         <div className="absolute top-0 left-0 w-full h-full bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-10"></div>
         <div className="relative z-10">
           <h2 className="text-4xl md:text-7xl font-montserrat font-black mb-8 italic uppercase tracking-tighter text-white group-hover:text-purple-50 transition-colors">
-            Prêt à passer la <span className="text-orange-200">5ème vitesse ?</span>
+            Prêt à passer la <span className="text-blue-200">5ème vitesse ?</span>
           </h2>
           <p className="text-purple-100 text-xl md:text-2xl max-w-2xl mx-auto mb-12 font-medium group-hover:text-white transition-colors">
             Rejoignez les 50+ auto-écoles françaises qui utilisent déjà AutoPilot AI et notre intelligence artificielle pour dominer leur secteur.
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-6">
-            <a href="#contact-section" className="bg-orange-500 text-white px-12 py-5 rounded-2xl font-black text-xl uppercase tracking-tighter hover:scale-105 transition-transform hover:shadow-2xl inline-flex items-center justify-center relative overflow-hidden group">
+            <a href="#contact-section" className="bg-blue-600 text-white px-12 py-5 rounded-2xl font-black text-xl uppercase tracking-tighter hover:scale-105 transition-transform hover:shadow-2xl inline-flex items-center justify-center relative overflow-hidden group">
               Demander une Démo
-              <div className="absolute inset-0 bg-orange-400/30 translate-x-full group-hover:translate-x-0 transition-transform duration-500"></div>
+              <div className="absolute inset-0 bg-blue-400/30 translate-x-full group-hover:translate-x-0 transition-transform duration-500"></div>
             </a>
             <button 
               onClick={() => onNavigate('roi')}

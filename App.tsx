@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from 'react';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
@@ -39,47 +38,47 @@ const App: React.FC = () => {
       default:
         return (
           <>
-            <section className="relative bg-black">
+            <section className="relative bg-transparent">
               <Hero onNavigate={(v) => setView(v as any)} />
             </section>
             
-            <section id="top-voice-demo" className="py-24 bg-gray-950 border-y border-gray-900">
+            <section id="top-voice-demo" className="py-24 bg-gray-900/30 backdrop-blur-sm border-y border-white/5">
               <VoiceDemo />
             </section>
 
             <div className="space-y-0">
-              <section id="pain-points" className="py-32 bg-black border-b border-gray-900">
+              <section id="pain-points" className="py-32 bg-transparent border-b border-white/5">
                 <PainPoints />
               </section>
 
-              {/* WhatsAppDemo has its own dark styling */}
+              {/* WhatsAppDemo has its own internal styling, now adjusted to transparent via component update if needed, or here */}
               <WhatsAppDemo />
 
-              <section id="logiciels" className="py-32 bg-gray-950 border-y border-gray-900">
+              <section id="logiciels" className="py-32 bg-gray-900/30 backdrop-blur-sm border-y border-white/5">
                 <DynamicLogiciels />
               </section>
 
-              <section id="clara-voice" className="py-32 bg-black border-y border-gray-900">
+              <section id="clara-voice" className="py-32 bg-transparent border-y border-white/5">
                 <LiveVoiceAgent />
               </section>
 
-              <section id="clara-chat" className="py-32 bg-gray-950 border-y border-gray-900">
+              <section id="clara-chat" className="py-32 bg-gray-900/30 backdrop-blur-sm border-y border-white/5">
                 <ChatTutor />
               </section>
 
-              <section className="bg-black border-y border-gray-900">
+              <section className="bg-transparent border-y border-white/5">
                  <GroundingFAQ />
               </section>
 
-              <section className="bg-gray-950 border-y border-gray-900">
+              <section className="bg-gray-900/30 backdrop-blur-sm border-y border-white/5">
                  <Testimonials />
               </section>
 
-              <section id="contact-section" className="py-32 bg-black">
+              <section id="contact-section" className="py-32 bg-transparent">
                 <BookingForm />
               </section>
 
-              <section className="bg-gray-950 border-t border-gray-900">
+              <section className="bg-gray-900/50 backdrop-blur-md border-t border-white/10">
                 <CTA onNavigate={(v) => setView(v as any)} />
               </section>
             </div>
@@ -89,7 +88,7 @@ const App: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen bg-black font-sans selection:bg-orange-500/40 text-gray-100">
+    <div className="min-h-screen bg-transparent font-sans selection:bg-blue-500/40 text-gray-100">
       <Navbar onNavigate={(v) => setView(v as any)} currentView={view} />
       <main className="overflow-x-hidden pt-20">
         {renderContent()}

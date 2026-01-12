@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 
 interface Module {
@@ -26,7 +25,7 @@ const modules: Module[] = [
       "Satisfaction client accrue grâce à une disponibilité constante."
     ],
     icon: "fa-robot",
-    colorClass: "from-orange-600 to-orange-400"
+    colorClass: "from-blue-600 to-blue-400"
   },
   {
     id: "planning",
@@ -69,7 +68,7 @@ const DynamicLogiciels: React.FC = () => {
   return (
     <section id="logiciels" className="py-24 relative overflow-hidden animate-section-fade-in">
       {/* Animated Background Orb */}
-      <div className="absolute top-1/2 left-1/2 w-[700px] h-[500px] bg-orange-500/10 blur-[150px] rounded-full -translate-x-1/2 -translate-y-1/2 animate-float-lg -z-20"></div>
+      <div className="absolute top-1/2 left-1/2 w-[700px] h-[500px] bg-blue-500/10 blur-[150px] rounded-full -translate-x-1/2 -translate-y-1/2 animate-float-lg -z-20"></div>
 
       <div className="max-w-7xl mx-auto px-6">
         <div className="text-center mb-16">
@@ -82,7 +81,7 @@ const DynamicLogiciels: React.FC = () => {
         </div>
 
         <div className="relative glass p-4 md:p-8 rounded-[3.5rem] border-white/5 shadow-2xl bg-gray-900/40">
-          <div className="absolute inset-0 bg-gradient-to-br from-orange-500/5 to-transparent blur-[100px] rounded-[3.5rem] -z-10"></div>
+          <div className="absolute inset-0 bg-gradient-to-br from-blue-500/5 to-transparent blur-[100px] rounded-[3.5rem] -z-10"></div>
           
           <div className="flex flex-col lg:flex-row gap-8">
             {/* Tabs / Navigation */}
@@ -94,19 +93,19 @@ const DynamicLogiciels: React.FC = () => {
                   className={`group relative flex items-center gap-4 p-5 rounded-2xl text-left transition-all duration-300
                     ${activeModuleId === module.id 
                       ? `bg-gradient-to-r ${module.colorClass} text-white shadow-xl scale-105 active-module-glow-border`
-                      : 'bg-gray-900 hover:bg-gray-800 text-gray-400 hover:border-orange-500/30 border border-transparent'
+                      : 'bg-gray-900 hover:bg-gray-950 text-gray-400 hover:border-blue-500/30 border border-transparent'
                     }`}
                 >
                   {/* Active module glow */}
                   {activeModuleId === module.id && (
-                    <div className="absolute inset-0 bg-gradient-to-r from-orange-400/20 to-transparent blur-xl opacity-70 animate-pulse-light rounded-2xl"></div>
+                    <div className="absolute inset-0 bg-gradient-to-r from-blue-400/20 to-transparent blur-xl opacity-70 animate-pulse-light rounded-2xl"></div>
                   )}
                   <div className={`relative w-12 h-12 rounded-xl flex items-center justify-center text-2xl 
                     ${activeModuleId === module.id ? 'bg-white/20 scale-110 shadow-lg' : 'bg-gray-800 group-hover:bg-gray-700 group-hover:scale-105 text-gray-500'} transition-all duration-300`}>
                     <i className={`fas ${module.icon}`}></i>
                   </div>
                   <div className="relative z-10">
-                    <div className={`font-bold text-sm uppercase tracking-widest ${activeModuleId === module.id ? 'text-white' : 'text-orange-500 group-hover:text-orange-400'}`}>
+                    <div className={`font-bold text-sm uppercase tracking-widest ${activeModuleId === module.id ? 'text-white' : 'text-blue-500 group-hover:text-blue-400'}`}>
                       {module.role}
                     </div>
                     <h3 className={`text-xl font-bold ${activeModuleId === module.id ? 'text-white' : 'text-gray-300 group-hover:text-white'}`}>
@@ -120,15 +119,15 @@ const DynamicLogiciels: React.FC = () => {
             {/* Content Display */}
             <div 
               key={activeModule.id} // Key to re-trigger animation on content change
-              className="lg:w-2/3 p-6 md:p-10 bg-gray-950 rounded-3xl border border-gray-800 flex flex-col justify-between animate-in fade-in slide-in-from-top-4 duration-500 shadow-xl"
+              className="lg:w-2/3 p-6 md:p-10 bg-gray-900 rounded-3xl border border-gray-800 flex flex-col justify-between animate-in fade-in slide-in-from-top-4 duration-500 shadow-xl"
             >
               <div className="text-center mb-8">
                 <div className={`w-24 h-24 mx-auto mb-6 rounded-full flex items-center justify-center text-5xl 
-                  bg-gradient-to-tr ${activeModule.colorClass} shadow-xl glow-orange transform animate-bounce-custom text-white`}>
+                  bg-gradient-to-tr ${activeModule.colorClass} shadow-xl glow-blue transform animate-bounce-custom text-white`}>
                   <i className={`fas ${activeModule.icon}`}></i>
                 </div>
                 <h3 className="text-4xl font-bold font-montserrat italic mb-4 text-white">{activeModule.title}</h3>
-                <p className={`text-base font-bold uppercase tracking-widest text-orange-500 mb-6`}>{activeModule.role}</p>
+                <p className={`text-base font-bold uppercase tracking-widest text-blue-500 mb-6`}>{activeModule.role}</p>
                 <p className="text-gray-400 text-lg leading-relaxed max-w-2xl mx-auto mb-8">
                   {activeModule.introDesc}
                 </p>
@@ -144,7 +143,7 @@ const DynamicLogiciels: React.FC = () => {
               </div>
 
               <div className="text-center mt-auto">
-                <button className="inline-flex items-center gap-3 px-8 py-4 bg-orange-500 hover:bg-orange-600 text-white rounded-2xl font-bold text-lg transition-all hover:scale-105 active:scale-95 shadow-lg shadow-orange-500/30">
+                <button className="inline-flex items-center gap-3 px-8 py-4 bg-blue-600 hover:bg-blue-700 text-white rounded-2xl font-bold text-lg transition-all hover:scale-105 active:scale-95 shadow-lg shadow-blue-500/30">
                   Découvrir le module <i className="fas fa-arrow-right text-base"></i>
                 </button>
               </div>
@@ -182,7 +181,7 @@ const DynamicLogiciels: React.FC = () => {
         }
 
         .active-module-glow-border {
-          box-shadow: 0 0 0 3px rgba(249, 115, 22, 0.5), 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+          box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.5), 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
         }
 
         @keyframes slideInUp {

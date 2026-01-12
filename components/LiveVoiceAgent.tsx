@@ -1,4 +1,3 @@
-
 import React, { useState, useRef, useEffect } from 'react';
 import { ai, createPcmBlob, decode, decodeAudioData, API_KEY_ERROR_MESSAGE } from '../services/gemini';
 import { LiveServerMessage, Modality } from '@google/genai';
@@ -153,7 +152,7 @@ const LiveVoiceAgent: React.FC = () => {
   return (
     <div className="max-w-4xl mx-auto px-6">
       <div className="text-center mb-12">
-        <div className="inline-block px-4 py-1.5 mb-6 rounded-full bg-orange-500/10 border border-orange-500/20 text-orange-500 text-[10px] font-black uppercase tracking-[0.2em]">
+        <div className="inline-block px-4 py-1.5 mb-6 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-500 text-[10px] font-black uppercase tracking-[0.2em]">
           Démonstration Vocale
         </div>
         <h2 className="text-4xl md:text-5xl font-montserrat font-black mb-6 italic uppercase tracking-tight text-white">
@@ -165,12 +164,12 @@ const LiveVoiceAgent: React.FC = () => {
       </div>
 
       <div className="relative group">
-        <div className="absolute -inset-1 bg-gradient-to-r from-orange-500/20 to-purple-600/20 rounded-[3rem] blur opacity-30 group-hover:opacity-50 transition duration-1000"></div>
-        <div className="relative glass p-16 rounded-[3rem] border-gray-800 text-center bg-gray-950 overflow-hidden flex flex-col items-center justify-center min-h-[500px]">
+        <div className="absolute -inset-1 bg-gradient-to-r from-blue-500/20 to-purple-600/20 rounded-[3rem] blur opacity-30 group-hover:opacity-50 transition duration-1000"></div>
+        <div className="relative glass p-16 rounded-[3rem] border-gray-800 text-center bg-gray-900 overflow-hidden flex flex-col items-center justify-center min-h-[500px]">
           
           {/* Animated Background Mesh */}
           <div className="absolute inset-0 opacity-20">
-             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-gradient-to-r from-orange-900/40 to-purple-900/40 blur-[100px] rounded-full animate-pulse-slow"></div>
+             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-gradient-to-r from-blue-900/40 to-purple-900/40 blur-[100px] rounded-full animate-pulse-slow"></div>
           </div>
 
           <div className="relative z-10 flex flex-col items-center gap-12">
@@ -180,20 +179,20 @@ const LiveVoiceAgent: React.FC = () => {
               <div className={`w-48 h-48 rounded-full flex items-center justify-center transition-all duration-1000 ${
                 isConnected 
                   ? 'shadow-[0_0_100px_rgba(168,85,247,0.4)] scale-110' 
-                  : 'shadow-[0_0_0_rgba(0,0,0,0)] bg-gray-900 border border-gray-800'
+                  : 'shadow-[0_0_0_rgba(0,0,0,0)] bg-gray-800 border border-gray-700'
               }`}>
                 {isConnected ? (
                   // Active State: Siri-like Orb
                   <div className="relative w-full h-full rounded-full overflow-hidden">
-                     <div className="absolute inset-0 bg-gradient-to-br from-orange-500 to-purple-600 animate-spin-slow opacity-80 blur-xl"></div>
-                     <div className="absolute inset-2 bg-gray-950 rounded-full flex items-center justify-center z-10">
+                     <div className="absolute inset-0 bg-gradient-to-br from-blue-500 to-purple-600 animate-spin-slow opacity-80 blur-xl"></div>
+                     <div className="absolute inset-2 bg-gray-900 rounded-full flex items-center justify-center z-10">
                         {isAgentSpeaking ? (
                           // Waveform animation
                           <div className="flex items-center gap-1.5 h-12">
                             {[...Array(5)].map((_, i) => (
                               <div 
                                 key={i} 
-                                className="w-1.5 bg-gradient-to-t from-orange-400 to-purple-500 rounded-full animate-wave"
+                                className="w-1.5 bg-gradient-to-t from-blue-400 to-purple-500 rounded-full animate-wave"
                                 style={{ animationDelay: `${i * 0.1}s` }}
                               ></div>
                             ))}
@@ -214,7 +213,7 @@ const LiveVoiceAgent: React.FC = () => {
               {isConnected && (
                  <>
                    <div className="absolute inset-0 rounded-full border border-purple-500/30 animate-ping-slow"></div>
-                   <div className="absolute -inset-4 rounded-full border border-orange-500/20 animate-ping-slower"></div>
+                   <div className="absolute -inset-4 rounded-full border border-blue-500/20 animate-ping-slower"></div>
                  </>
               )}
             </div>

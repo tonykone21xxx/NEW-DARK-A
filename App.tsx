@@ -16,9 +16,10 @@ import ROICalculator from './components/ROICalculator';
 import GroundingFAQ from './components/GroundingFAQ';
 import VoiceDemo from './components/VoiceDemo';
 import WhatsAppDemo from './components/WhatsAppDemo';
+import DropshipScraper from './components/DropshipScraper';
 
 const App: React.FC = () => {
-  const [view, setView] = useState<'home' | 'mentions' | 'privacy' | 'terms' | 'roi'>('home');
+  const [view, setView] = useState<'home' | 'mentions' | 'privacy' | 'terms' | 'roi' | 'dropship'>('home');
 
   // Handle scroll to top on view change
   useEffect(() => {
@@ -35,6 +36,8 @@ const App: React.FC = () => {
         return <Terms onBack={() => setView('home')} />;
       case 'roi':
         return <ROICalculator onBack={() => setView('home')} />;
+      case 'dropship':
+        return <DropshipScraper onBack={() => setView('home')} />;
       default:
         return (
           <>

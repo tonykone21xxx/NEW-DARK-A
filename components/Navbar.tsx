@@ -24,6 +24,7 @@ const Navbar: React.FC<NavbarProps> = ({ onNavigate, currentView }) => {
         </div>
 
         <div className="flex items-center gap-4">
+          <button onClick={() => onNavigate('dropship')} className="hidden sm:block text-sm font-bold text-purple-400 hover:text-purple-300 transition-colors">Dropship Tool</button>
           <button className="hidden sm:block text-sm font-bold text-gray-400 hover:text-blue-400 transition-colors">Se connecter</button>
           <a 
             href="#contact-section"
